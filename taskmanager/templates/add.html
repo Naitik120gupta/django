@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Tasks</title>
+  </head>
+  <body>
+    <h1>Add Task</h1>
+    <form action="{%url 'task:add' %}" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type='Submit'>
+    </form>
+    <a href="{% url 'index' %}">View Tasks</a>
+  </body>
+</html>
